@@ -39,7 +39,7 @@ chmod +x pre_local.sh
 Then any push will be:
 
 ```bash
-git push origin master
+git push production master
 ```
 
 ## Licence
