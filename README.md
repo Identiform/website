@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://identiform.com/">
-    <img alt="identiForm" src="https://github.com/Identiform/token_sale_starter/blob/master/media/logo.png" width="683">
+    <img alt="identiForm" src="https://github.com/Identiform/website/blob/master/src/assets/img/logo.png" width="683">
   </a>
 </p>
 
@@ -23,14 +23,14 @@ npm start
 Initially:
 
 ```bash
-cp -r ./.scripts root@173.212.207.88:/root/
+cp -r ./.scripts root@123.123.123.123:/root/
 # For subsequent projects, only new .env is needeed
-cp ./.env root@173.212.207.88:/root/.scripts
-ssh root@173.212.207.88 "chmod +x /root/.scripts/pre_remote.sh"
+cp ./.env root@123.123.123.123:/root/.scripts
+ssh root@123.123.123.123 "chmod +x /root/.scripts/pre_remote.sh"
 # Verify permissions (optional):
-ssh root@173.212.207.88 "ls -la /root/.scripts"
+ssh root@123.123.123.123 "ls -la /root/.scripts"
 # Install remote repo:
-ssh root@173.212.207.88 "bash /root/.scripts/pre_remote.sh"
+ssh root@123.123.123.123 "bash /root/.scripts/pre_remote.sh"
 # Add remote git repo:
 chmod +x pre_local.sh
 ./pre_local.sh
