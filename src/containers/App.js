@@ -8,13 +8,13 @@ import * as actions from 'actions'
 import Async from 'components/Async'
 import env from 'env'
 ReactGA.initialize(env.GA)
+const Partners = Async(() => import('containers/Partners'))
+const Header = Async(() => import('components/Header'))
+const Footer = Async(() => import('components/Footer'))
 const supportsHistory = 'pushState' in window.history
 const Home = Async(() => import('containers/Home'))
 const Token = Async(() => import('containers/Token'))
 const NotImplemented = Async(() => import('containers/NotImplemented'))
-const Partners = Async(() => import('containers/Partners'))
-const Header = Async(() => import('components/Header'))
-const Footer = Async(() => import('components/Footer'))
 
 const style = {
   background: 'linear-gradient( rgba(0, 0, 250, 0.5), rgba(0, 0, 100, 0.5) ), url(\'https://talaikis.com/uploads/bg.jpg\')',
