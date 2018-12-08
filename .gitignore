@@ -4,4 +4,3 @@ src/contracts/
 build/
 cypress/videos/
 cypress/screenshots/
-src/assets/
