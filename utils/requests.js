@@ -2,8 +2,6 @@ import http from 'http'
 import https from 'https'
 import { stringify } from 'querystring'
 
-import { error } from '../debug'
-
 const request = (schema, obj, callback) => {
   const schemaLib = typeof schema === 'string' && schema === 'http' ? http : https
   const payloadString = stringify(obj.data)
@@ -20,7 +18,6 @@ const request = (schema, obj, callback) => {
 
   req.on('error', (err) => {
     // @TODO log here
-    error(err.message)
     callback({ error: err.message })
   })
 

@@ -1,3 +1,4 @@
+require('@babel/polyfill')
 require('dotenv').config({ path: './.env' })
 const express = require('express')
 const app = express()

@@ -1,5 +1,5 @@
 require('dotenv').config({ path: './.env' })
-const { strictEqual } = require*('assert')
+const { strictEqual } = require('assert')
 strictEqual(typeof process.env.EMAIL_DOMAIN, 'string')
 strictEqual(typeof process.env.MAILGUN_API_KEY, 'string')
 strictEqual(typeof process.env.API_PORT, 'string')
