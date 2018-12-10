@@ -1,15 +1,18 @@
 import React from 'react';
 
-import { Container, Button } from 'reactstrap'
+import { Container, Card, CardHeader, CardBody, CardText, CardTitle, Row, Col, Button } from 'reactstrap'
 
-import Async from 'components/Async'
 import Head from 'components/Head'
+import ContactUs from 'components/ContactUs'
 import logo from 'assets/img/logo.svg'
-const Section = Async(() => import('components/Section'))
 
 const style = {
-  padding: '10%',
+  padding: '5%',
   textAlign: 'center'
+}
+
+const card = {
+  padding: '3%'
 }
 
 const h1 = {
@@ -21,19 +24,68 @@ const Home = () => (
     <Container>
       <Head title="Home" />
       <div style={style}>
-      <img src={logo} width="100%" height="100%" alt="identiForm Decentralized KYC" />
+      <img src={logo} width="100%" height="100%" alt="Blockchain Development" />
         <h1 className="display-4" style={h1}>
-        Register with identiForm and receive free tokens*
+        Blockchain Development
         </h1>
-        <p style={h1}>* Currently only demo tokens.</p>
-        <a href={`${process.env.REACT_APP_SALES_URL}/get`}>
-          <Button color="primary">
-            Participate in pre-sale
-          </Button>
-        </a>
       </div>
-      <Section />
     </Container>
+    <Container>
+      <div style={style}>
+        <h1 className="display-4" style={h1}>
+          Services
+        </h1>
+        <Row>
+          <Col sm="4" style={card}>
+            <Card>
+              <CardHeader tag="h3">Contracts</CardHeader>
+              <CardBody>
+                <CardTitle>Ethereum Contracts.</CardTitle>
+                <CardText>High quality, well tested Ethereum contracts.</CardText>
+              </CardBody>
+              <a href="https://act.identiform.com">
+                <Button color="primary">Example*</Button>
+              </a>
+              <p>* simplest contract with IPFS data source possible.</p>
+            </Card>
+          </Col>
+          <Col sm="4" style={card}>
+            <Card>
+              <CardHeader tag="h3">dApps</CardHeader>
+              <CardBody>
+                <CardTitle>Decentralized web and mobile apps</CardTitle>
+                <CardText>Any Ethereum contract also can go with its own dApp, which either can go with MetaMask extension (for websites only) or be totally independent.</CardText>
+                <a href="https://sales.identiform.com">
+                  <Button color="primary">Example sales dApp</Button>
+                </a>
+              </CardBody>
+            </Card>
+          </Col>
+          <Col sm="4" style={card}>
+            <Card>
+              <CardHeader tag="h3">Architecture</CardHeader>
+              <CardBody>
+                <CardTitle>Scaling, consulting, deployments</CardTitle>
+                <CardText>Scaling solutions, like private side chains, interchanges, IPFS, consulting, deployment, all you need.</CardText>
+                <a href="https://ipfs.identiform.com">
+                  <Button color="primary">Example IPFS dApp</Button>
+                </a>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </div>
+    </Container>
+    {/*
+    <Container>
+      <div style={style}>
+        <h1 className="display-4" style={h1}>
+          Examples of Work
+        </h1>
+      </div>
+    </Container>
+    */}
+    <ContactUs />
   </div>
 )
 

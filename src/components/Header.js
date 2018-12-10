@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 
-import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown,
-  DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
+import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
 import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
@@ -49,70 +48,6 @@ class Header extends PureComponent {
                   <FontAwesomeIcon style={style} icon={faFacebook} />
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href={`${process.env.REACT_APP_APP_URL}/account`} style={style}>
-                  My Account
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href={`${process.env.REACT_APP_APP_URL}/manager_register`} style={style}>
-                  Service
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href={`${process.env.REACT_APP_APP_URL}/referral_register`} style={style}>
-                  Referrals
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/partners" style={style}>
-                  Partnership
-                </NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret style={style}>
-                  Directory
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    <NavLink href={`${process.env.REACT_APP_APP_URL}/icos`}>
-                      ICOs
-                    </NavLink>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <NavLink href={`${process.env.REACT_APP_APP_URL}/airdrops`}>
-                      Airdrops
-                    </NavLink>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <NavLink href={`${process.env.REACT_APP_APP_URL}/users`}>
-                      Reputations
-                    </NavLink>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret style={style}>
-                  Token
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    <NavLink href={`${process.env.REACT_APP_SALES_URL}/market_info`}>
-                      Market Info
-                    </NavLink>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <NavLink href={`${process.env.REACT_APP_SALES_URL}/get`}>
-                      Pre-sale (MainNet)
-                    </NavLink>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <NavLink href={`${process.env.REACT_APP_APP_URL}/transfer`}>
-                      Transfer (MainNet)
-                    </NavLink>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>

@@ -8,16 +8,14 @@ import * as actions from 'actions'
 import Async from 'components/Async'
 import env from 'env'
 ReactGA.initialize(env.GA)
-const Partners = Async(() => import('containers/Partners'))
 const Header = Async(() => import('components/Header'))
 const Footer = Async(() => import('components/Footer'))
 const supportsHistory = 'pushState' in window.history
 const Home = Async(() => import('containers/Home'))
-const Token = Async(() => import('containers/Token'))
 const NotImplemented = Async(() => import('containers/NotImplemented'))
 
 const style = {
-  background: 'linear-gradient( rgba(0, 0, 250, 0.5), rgba(0, 0, 100, 0.5) ), url(\'https://talaikis.com/uploads/bg.jpg\')',
+  background: 'linear-gradient( rgba(0, 0, 250, 1), rgba(0, 0, 100, 0.8) )',
   filter: 'alpha(opacity=100)',
   'background-repeat': 'no-repeat'
 }
@@ -36,8 +34,6 @@ class App extends PureComponent {
               <Header />
               <Switch>
                 <Route exact strict sensitive path='/' component={Home} />
-                <Route exact strict sensitive path='/token' component={Token} />
-                <Route exact strict sensitive path='/partners' component={Partners} />
                 <Route exact strict sensitive path='/not_implemented' component={NotImplemented} />
               </Switch>
             </div>
