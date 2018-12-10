@@ -4,8 +4,20 @@ const express = require('express')
 const app = express()
 const { sendEmail } = require('./email')
 
+const whitelist = ['http://127.0.0.1:3063', 'http://127.0.0.1:3000']
+const corsOptions = (req, callback) => {
+  let options
+  if (whitelist.includes(req.header('Origin'))) {
+    options = { origin: true }
+  } else {
+    options = { origin: false }
+  }
+  callback(null, options)
+}
+
 app.use(require('compression')())
 app.use(require('body-parser').json())
+app.use(require('cors')(corsOptions))
 
 app.post('/contactus', (req, res) => {
   const email = typeof req.body.email === 'string' ? req.body.email : false
@@ -18,11 +30,11 @@ app.post('/contactus', (req, res) => {
       if (!err.error) {
         res.end(JSON.stringify({ status: 'sent' }))
       } else {
-        res.status(500)
+        res.end(JSON.stringify({ status: 'error' }))
       }
     })
   } else {
-    res.status(500)
+    res.end(JSON.stringify({ status: 'error' }))
   }
 })
 

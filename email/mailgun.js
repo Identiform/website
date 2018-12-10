@@ -1,5 +1,3 @@
-import { createReadStream } from 'fs'
-import { join } from 'path'
 import { strictEqual } from 'assert'
 
 import { config } from '../config'
@@ -14,8 +12,7 @@ const sendMailgunEmail = (email, subject, msg, callback) => {
   const validMsg = typeof msg === 'string' && msg.trim().length > 0 ? msg.trim() : false
 
   if (validemail && validMsg) {
-    const logo = createReadStream(join(__dirname, '../../.data', 'assets', 'logo.png'))
-    const htmlMsg = `<img src="cid:logo.png" width="200px"><br /><h3>${subject}</h3><p>${msg}</p>`
+    const htmlMsg = `<br /><h3>${subject}</h3><p>${msg}</p>`
 
     const obj = {
       protocol: 'https:',
@@ -28,8 +25,7 @@ const sendMailgunEmail = (email, subject, msg, callback) => {
         to: email,
         subject: subject,
         text: msg,
-        html: htmlMsg,
-        inline: [logo]
+        html: htmlMsg
       },
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'

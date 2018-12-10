@@ -16,8 +16,7 @@ const NotImplemented = Async(() => import('containers/NotImplemented'))
 
 const style = {
   background: 'linear-gradient( rgba(0, 0, 250, 1), rgba(0, 0, 100, 0.8) )',
-  filter: 'alpha(opacity=100)',
-  'background-repeat': 'no-repeat'
+  filter: 'alpha(opacity=100)'
 }
 
 class App extends PureComponent {
