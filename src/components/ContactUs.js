@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import { Button, Form, Input, Label, Col, Row } from 'reactstrap'
 
+const apiUrl = `http://localhost:${process.env.API_PORT}`
+
 const style = {
   padding: '10%',
   background: 'white',
@@ -31,7 +33,7 @@ export default class ContactUs extends PureComponent {
     const msg = this.state.msg
     const email = this.state.email
     if (typeof name === 'string' && typeof msg === 'string' && typeof email === 'string') {
-      fetch('/contactus', {
+      fetch(`${apiUrl}/contactus`, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
