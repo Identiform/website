@@ -33,7 +33,7 @@ class Header extends PureComponent {
       <Container>
         <Navbar light expand="md" fixed="true" color="faded">
           <NavbarBrand href="/">
-          <img src={logo} width="70%" height="100%" alt="identiForm Decentralized KYC" />
+          <img src={logo} width="70%" height="100%" alt="identiForm Blockchain Development" />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar style={style}>

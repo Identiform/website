@@ -53,8 +53,8 @@ const Home = () => (
             <Card>
               <CardHeader tag="h3">dApps</CardHeader>
               <CardBody>
-                <CardTitle>Decentralized web and mobile apps</CardTitle>
-                <CardText>Any Ethereum contract also can go with its own dApp, which either can go with MetaMask extension (for websites only) or be totally independent.</CardText>
+                <CardTitle>Decentralized, secure web and mobile apps</CardTitle>
+                <CardText>Any Ethereum contract also can go with its own decentralized app, which either can go with MetaMask extension (for websites only) or be totally independent.</CardText>
                 <a href="https://sales.identiform.com">
                   <Button color="primary">Example sales dApp</Button>
                 </a>
@@ -66,7 +66,7 @@ const Home = () => (
               <CardHeader tag="h3">Architecture</CardHeader>
               <CardBody>
                 <CardTitle>Scaling, consulting, deployments</CardTitle>
-                <CardText>Scaling solutions, like private side chains, interchanges, IPFS, consulting, deployment, all you need.</CardText>
+                <CardText>Scaling solutions, like private side chains, interchanges, IPFS, end-to-end encryption between services, consulting, deployment, all you need.</CardText>
                 <a href="https://ipfs.identiform.com">
                   <Button color="primary">Example IPFS dApp</Button>
                 </a>
