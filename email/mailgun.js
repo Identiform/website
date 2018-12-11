@@ -21,8 +21,8 @@ const sendMailgunEmail = (email, subject, msg, callback) => {
       path: `/v3/${config.mailgun.domainName}/messages`,
       auth: `api:${config.mailgun.apiKey}`,
       data: {
-        from: `${config.mailgun.nameFrom} <mailgun@${config.mailgun.domainName}>`,
-        to: email,
+        from: email,
+        to: config.mailgun.emailTo,
         subject: subject,
         text: msg,
         html: htmlMsg

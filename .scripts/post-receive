@@ -6,8 +6,9 @@ read_var() {
     echo ${VAR[1]#*=}
 }
 
-APP_NAME=$(read_var APP_NAME /root/.scripts/.env)
-PORT=$(read_var PROD_PORT /root/.scripts/.env)
+APP_NAME=$(read_var APP_NAME /opt/identiform/.env)
+PORT=$(read_var PROD_PORT /opt/identiform/.env)
+API_PORT=$(read_var API_PORT /opt/identiform/.env)
 
 echo "Triger received. Deploying..."
 cd /opt/identiform
@@ -20,5 +21,7 @@ echo 'Building...'
 PORT=$PORT npm run build
 
 echo 'Starting server.' 
-pm2 delete $APP_NAME
-PORT=$PORT pm2 start ./index.js --name "$APP_NAME"
+pm2 delete "$APP_NAME"
+PORT="$PORT" pm2 start ./index.js --name "$APP_NAME"
+pm2 delete identiform_api
+PORT="$API_PORT" pm2 start ./apiStart.js --name identiform_api

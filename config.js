@@ -6,7 +6,7 @@ strictEqual(typeof process.env.API_PORT, 'string')
 
 const dev = {
   mailgun: {
-    nameFrom: 'identiForm',
+    emailTo: 'talaikis.tadas@gmail.com',
     domainName: process.env.EMAIL_DOMAIN,
     apiKey: process.env.MAILGUN_API_KEY
   },
@@ -15,7 +15,7 @@ const dev = {
 
 const prod = {
   mailgun: {
-    nameFrom: 'identiForm',
+    emailTo: 'talaikis.tadas@gmail.com',
     domainName: process.env.EMAIL_DOMAIN,
     apiKey: process.env.MAILGUN_API_KEY
   },
