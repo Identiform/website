@@ -1,15 +1,5 @@
 #!/bin/bash
 
-read_var() {
-    VAR=$(grep $1 $2 | xargs)
-    IFS="=" read -ra VAR <<< "$VAR"
-    echo ${VAR[1]#*=}
-}
-
-APP_NAME=$(read_var APP_NAME /opt/identiform/.env)
-PORT=$(read_var PROD_PORT /opt/identiform/.env)
-API_PORT=$(read_var API_PORT /opt/identiform/.env)
-
 echo "Triger received. Deploying..."
 cd /opt/identiform
 git --git-dir=/opt/identiform.git --work-tree=/opt/identiform checkout master -f
@@ -21,7 +11,8 @@ echo 'Building...'
 PORT=$PORT npm run build
 
 echo 'Starting server.' 
-pm2 delete "$APP_NAME"
-PORT="$PORT" pm2 start ./index.js --name "$APP_NAME"
-pm2 delete identiform_api
-PORT="$API_PORT" pm2 start ./apiStart.js --name identiform_api
+pm2 reload identiform
+PORT=3063 pm2 start ./index.js --name identiform
+
+pm2 reload identiform_api
+API_PORT=3086 pm2 start ./apiStart.js --name identiform_api

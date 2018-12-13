@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Container, Card, CardHeader, CardBody, CardText, CardTitle, Row, Col, Button } from 'reactstrap'
 
-import Head from 'components/Head'
 import ContactUs from 'components/ContactUs'
 import logo from 'assets/img/logo.svg'
+import Head from 'components/Head'
 
 const style = {
   padding: '5%',

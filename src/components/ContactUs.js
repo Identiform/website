@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react'
-import { Button, Form, Input, Label, Col, Row } from 'reactstrap'
 import { post } from 'axios'
+import { Button, Form, Input, Label, Col, Row } from 'reactstrap'
 
-const apiUrl = `http://localhost:${process.env.REACT_APP_API_PORT}`
+const apiUrl = 'https://mail.identiform.com'
+const apiKey = process.env.REACT_APP_API_KEY
 
 const style = {
   padding: '10%',
@@ -62,7 +63,10 @@ export default class ContactUs extends PureComponent {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email: email, msg: msg, name: name })
+        email: email,
+        msg: msg,
+        name: name,
+        key: apiKey
       }).then((res) => {
         if (res.data.status === 'sent') {
           this.setState({ sent: true })

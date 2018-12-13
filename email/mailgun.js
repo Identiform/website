@@ -5,7 +5,7 @@ import { request } from '../utils'
 
 strictEqual(typeof config.mailgun.domainName, 'string')
 strictEqual(typeof config.mailgun.apiKey, 'string')
-strictEqual(typeof config.mailgun.nameFrom, 'string')
+strictEqual(typeof config.mailgun.emailTo, 'string')
 
 const sendMailgunEmail = (email, subject, msg, callback) => {
   const validemail = typeof email === 'string' && email.indexOf('@') > -1 ? email : false

@@ -10,7 +10,9 @@ const dev = {
     domainName: process.env.EMAIL_DOMAIN,
     apiKey: process.env.MAILGUN_API_KEY
   },
-  apiUrl: `http://localhost:${process.env.API_PORT}`
+  apiUrl: `http://localhost:${process.env.API_PORT}`,
+  emailProvider: 'mailgun',
+  apiKey: process.env.REACT_APP_API_KEY
 }
 
 const prod = {
@@ -19,7 +21,9 @@ const prod = {
     domainName: process.env.EMAIL_DOMAIN,
     apiKey: process.env.MAILGUN_API_KEY
   },
-  apiUrl: `http://localhost:${process.env.API_PORT}`
+  apiUrl: `http://localhost:${process.env.API_PORT}`,
+  emailProvider: 'mailgun',
+  apiKey: process.env.REACT_APP_API_KEY
 }
 
 const configs = {

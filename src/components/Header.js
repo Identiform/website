@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react'
 
 import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
-import faFacebook from '@fortawesome/fontawesome-free-brands/faFacebook'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 import logo from 'assets/img/cube.svg'
 

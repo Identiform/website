@@ -1,29 +1,21 @@
+import express from 'express'
+import { sendEmail } from './email'
+import { config } from './config'
+const app = express()
 require('@babel/polyfill')
 require('dotenv').config({ path: './.env' })
-const express = require('express')
-const app = express()
-const { sendEmail } = require('./email')
-
-const whitelist = ['http://127.0.0.1:3063', 'http://127.0.0.1:3000']
-const corsOptions = (req, callback) => {
-  let options
-  if (whitelist.includes(req.header('Origin'))) {
-    options = { origin: true }
-  } else {
-    options = { origin: false }
-  }
-  callback(null, options)
-}
 
 app.use(require('compression')())
 app.use(require('body-parser').json())
-app.use(require('cors')(corsOptions))
+
+app.use(require('cors')())
 
 app.post('/contactus', (req, res) => {
   const email = typeof req.body.email === 'string' ? req.body.email : false
   const msg = typeof req.body.msg === 'string' ? req.body.msg : false
   const name = typeof req.body.name === 'string' ? req.body.name : false
-  if (email && msg && name) {
+  const validKey = req.body.key ? req.body.key === config.apiKey : false
+  if (email && msg && name && validKey) {
     const subject = `Message from identiForm: ${name}`
     sendEmail(email, subject, msg, (err) => {
       res.setHeader('Content-Type', 'application/json')

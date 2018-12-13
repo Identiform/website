@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Container } from 'reactstrap'
-import faBitcoin from '@fortawesome/fontawesome-free-brands/faBitcoin'
-import faRetweetalt from '@fortawesome/fontawesome-free-solid/faRetweet'
+import { faBitcoin } from '@fortawesome/free-brands-svg-icons'
+import { faRetweetalt } from '@fortawesome/fontawesome-free-solid'
 
 import Async from 'components/Async'
 const Block = Async(() => import('components/Block'))
