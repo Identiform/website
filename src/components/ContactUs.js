@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragmwnt } from 'react'
 import { post } from 'axios'
 import { Button, Form, Input, Label, Col, Row } from 'reactstrap'
 
@@ -23,7 +23,8 @@ export default class ContactUs extends PureComponent {
       email: '',
       name: '',
       msg: '',
-      error: undefined
+      error: undefined,
+      loading: false
     }
     this.mounted = false
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -53,6 +54,7 @@ export default class ContactUs extends PureComponent {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    this.setState({ loading: true })
     const name = this.state.name
     const msg = this.state.msg
     const email = this.state.email
@@ -79,6 +81,7 @@ export default class ContactUs extends PureComponent {
     } else {
       this.setState({ error: 'Not all required information entered.' })
     }
+    this.setState({ loading: false })
   }
 
   render() {
@@ -103,6 +106,7 @@ export default class ContactUs extends PureComponent {
         </h1>
         { !this.state.sent ?
         <Form onSubmit={this.handleSubmit}>
+          <p className="lead">Simply drop us a note, we definitely will be able to help you.</p>
           <Row>
             <Col sm={4}>
             </Col>
@@ -133,7 +137,7 @@ export default class ContactUs extends PureComponent {
             <Col sm={4}>
             </Col>
           </Row>
-          <Button color="primary" style={button}>Submit</Button>
+          { !this.state.loading ? <Button color="primary" style={button}>Submit</Button> : <Fragmwnt>Working...</Fragmwnt> }
         </Form>
         : errors }
         { this.state.error ? this.state.error : null }
