@@ -24,7 +24,7 @@ const Home = () => (
     <Container>
       <Head title="Home" />
       <div style={style}>
-      <img src={logo} width="100%" height="100%" alt="Blockchain Development" />
+        <img src={logo} width="100%" height="100%" alt="Blockchain Development" />
         <h1 className="display-4" style={h1}>
         Blockchain Development
         </h1>
