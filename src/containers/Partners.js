@@ -21,7 +21,7 @@ const Partners = () => (
         as a company and get a KYC service along with a listing in our catalog.
         </p>
         <p className="lead">
-        For partnership opportunities write info@identiform.com
+        For partnership opportunities write info@talaikis.com
         </p>
       </div>
     </Container>

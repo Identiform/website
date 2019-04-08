@@ -43,7 +43,7 @@ const Home = () => (
                 <CardTitle>Ethereum Contracts.</CardTitle>
                 <CardText>High quality, well tested Ethereum contracts.</CardText>
               </CardBody>
-              <a href="https://act.identiform.com">
+              <a href="https://act.talaikis.com">
                 <Button color="primary">Example*</Button>
               </a>
               <p>* simplest contract with IPFS data source possible.</p>
@@ -55,7 +55,7 @@ const Home = () => (
               <CardBody>
                 <CardTitle>Decentralized, secure web and mobile apps</CardTitle>
                 <CardText>Any Ethereum contract also can go with its own decentralized app, which either can go with MetaMask extension (for websites only) or be totally independent.</CardText>
-                <a href="https://sales.identiform.com">
+                <a href="https://sales.talaikis.com">
                   <Button color="primary">Example sales dApp</Button>
                 </a>
               </CardBody>
@@ -67,7 +67,7 @@ const Home = () => (
               <CardBody>
                 <CardTitle>Scaling, consulting, deployments</CardTitle>
                 <CardText>Scaling solutions, like private side chains, interchanges, IPFS, end-to-end encryption between services, consulting, deployment, all you need.</CardText>
-                <a href="https://ipfs.identiform.com">
+                <a href="https://ipfs.talaikis.com">
                   <Button color="primary">Example IPFS dApp</Button>
                 </a>
               </CardBody>
