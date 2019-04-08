@@ -73,7 +73,7 @@ export default class ContactUs extends PureComponent {
         if (res.data.status === 'sent') {
           this.setState({ sent: true })
         } else {
-          this.setState({ sent: false, error: 'Some error sending email.' })
+          this.setState({ sent: false, error: res.data.status })
         }
       }).catch((error) => {
         this.setState({ error:  error.message })

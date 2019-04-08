@@ -1,25 +1,16 @@
-FROM node:11-alpine as build-deps
+FROM keymetrics/pm2:latest-alpine
 
-LABEL version="1.0"
-LABEL description="React Nginx."
+RUN npm i -g pm2
 
-ENV NODE_ENV=production
-
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-COPY . /usr/src/app
+WORKDIR /var/www/app
+COPY ./ ./
 RUN npm i
+
+ENV NODE_ENV production 
+ENV PORT 3000
+
+EXPOSE 3000
+
 RUN npm run build
 
-FROM jwilder/dockerize as config
-COPY ./.env /ENVFILE
-COPY ./nginx.conf /TEMPLATE
-RUN sh -c "export $(cat /ENVFILE | xargs) && dockerize -template /TEMPLATE > /NGINX.CONF"
-
-FROM nginx
-COPY --from=build-deps /usr/src/app/build /usr/share/nginx/html
-COPY --from=config /NGINX.CONF /etc/nginx/nginx.conf
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["pm2-runtime", "index.js", "i", "2"]
