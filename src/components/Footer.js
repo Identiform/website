@@ -12,7 +12,7 @@ const p = {
 
 const Footer = () => (
   <div style={div}>
-    <p style={p}>&copy; 2018, <a href="https://identiform.com">identiForm</a> | <a href="https://blueblood.ltd/">Web Development</a></p>
+    <p style={p}>&copy; 2018, <a href="https://blockchain.talaiks.com">identiForm</a> | <a href="https://talaikis.com/">Web Development</a></p>
   </div>
 )
 
