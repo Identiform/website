@@ -38,7 +38,7 @@ class Header extends PureComponent {
           <Collapse isOpen={this.state.isOpen} navbar style={style}>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="https://github.com/Identiform">
+                <NavLink href="https://github.com/TalaikisInc">
                   <FontAwesomeIcon style={style} icon={faGithub} />
                 </NavLink>
               </NavItem>
