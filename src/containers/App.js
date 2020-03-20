@@ -4,15 +4,15 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import ReactGA from 'react-ga'
 
-import * as actions from 'actions'
-import Async from 'components/Async'
-import env from 'env'
+import * as actions from '../actions'
+import Async from '../components/Async'
+import env from '../env'
 ReactGA.initialize(env.GA)
-const Header = Async(() => import('components/Header'))
-const Footer = Async(() => import('components/Footer'))
+const Header = Async(() => import('../components/Header'))
+const Footer = Async(() => import('../components/Footer'))
 const supportsHistory = 'pushState' in window.history
-const Home = Async(() => import('containers/Home'))
-const NotImplemented = Async(() => import('containers/NotImplemented'))
+const Home = Async(() => import('./Home'))
+const NotImplemented = Async(() => import('./NotImplemented'))
 
 const style = {
   background: 'linear-gradient( rgba(0, 0, 250, 1), rgba(0, 0, 100, 0.8) )',
@@ -21,7 +21,7 @@ const style = {
 
 class App extends PureComponent {
   initGA () {
-    ReactGA.initialize(process.env.GA_TRACKING_ID)
+    ReactGA.initialize('UA-137539256-1')
     // console.log('Initialized')
   }
 

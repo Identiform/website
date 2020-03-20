@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 const Head = (props) => (
   <Helmet>
     <meta charSet="utf-8" />
-    <title>{ props.title } | { process.env.REACT_APP_SITE_TITLE }</title>
+    <title>{ props.title } | identiForm: Blockchain Development</title>
   </Helmet>
 )
 

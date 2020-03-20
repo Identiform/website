@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container } from 'reactstrap'
 
-import Head from 'components/Head'
+import Head from '../components/Head'
 
 const div = {
   textAlign: 'center',

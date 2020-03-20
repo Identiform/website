@@ -1,13 +1,7 @@
 {
-    "alias": ["blockchain.talaikis.com"],
-    "build": {
-        "env": {
-            "REACT_APP_DATA_SRC": "@id-data-url",
-            "REACT_APP_LIST_U": "@id-list-u",
-            "REACT_APP_LIST_ID": "@id-list-id",
-            "REACT_APP_LIST_URL": "@id-list-url",
-            "REACT_APP_SITE_TITLE": "@id-site-title",
-            "REACT_APP_API_KEY": "@id-api-key"
-        }
-    }
+    "env": {
+        "REACT_APP_CONTACT_API": "@contact-api",
+        "REACT_APP_API_KEY": "@api-key",
+        "GA_TRACKING_ID": "@ga-tracking"
+      }
 }

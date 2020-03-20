@@ -2,7 +2,7 @@ import React, { PureComponent, Fragmwnt } from 'react'
 import { post } from 'axios'
 import { Button, Form, Input, Label, Col, Row } from 'reactstrap'
 
-const apiUrl = 'https://0h4dm430t3.execute-api.us-east-1.amazonaws.com/prod'
+const apiUrl = process.env.REACT_APP_CONTACT_API
 const apiKey = process.env.REACT_APP_API_KEY
 
 const style = {

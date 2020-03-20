@@ -4,7 +4,7 @@ import { Collapse, Container, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faFacebook } from '@fortawesome/free-brands-svg-icons'
 
-import logo from 'assets/img/cube.svg'
+import logo from '../assets/img/cube.svg'
 
 class Header extends PureComponent {
   constructor(props) {

@@ -4,8 +4,8 @@ import { Container } from 'reactstrap'
 import { faBitcoin } from '@fortawesome/free-brands-svg-icons'
 import { faRetweetalt } from '@fortawesome/fontawesome-free-solid'
 
-import Async from 'components/Async'
-const Block = Async(() => import('components/Block'))
+import Async from './Async'
+const Block = Async(() => import('./Block'))
 
 const style = {
   padding: '10%',
