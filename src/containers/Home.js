@@ -41,12 +41,12 @@ const Home = () => (
               <CardHeader tag="h3">Contracts</CardHeader>
               <CardBody>
                 <CardTitle>Ethereum Contracts.</CardTitle>
-                <CardText>High quality, well tested Ethereum contracts.</CardText>
+                <CardText>We develop high quality, well tested Ethereum contracts.</CardText>
               </CardBody>
               <a href="https://act.talaikis.com">
                 <Button color="primary">Example*</Button>
               </a>
-              <p>* simplest contract with IPFS data source possible.</p>
+              <p>* the simplest as possible contract with IPFS data source.</p>
             </Card>
           </Col>
           <Col sm="4" style={card}>
@@ -54,19 +54,24 @@ const Home = () => (
               <CardHeader tag="h3">dApps</CardHeader>
               <CardBody>
                 <CardTitle>Decentralized, secure web and mobile apps</CardTitle>
-                <CardText>Any Ethereum contract also can go with its own decentralized app, which either can go with MetaMask extension (for websites only) or be totally independent.</CardText>
+                <CardText>Any Ethereum contract also can go with its own app, which either can be used with MetaMask extension (for websites only) or be totally independent from third parties.</CardText>
                 <a href="https://sales.talaikis.com">
-                  <Button color="primary">Example sales dApp</Button>
+                  <Button color="primary">Example sales dApp w. Metamask</Button>
+                </a>
+                <br />
+                <br />
+                <a href="https://trueteslatechnologies.io/">
+                  <Button color="primary">Example serverless ICO dApp w/o Metamask</Button>
                 </a>
               </CardBody>
             </Card>
           </Col>
           <Col sm="4" style={card}>
             <Card>
-              <CardHeader tag="h3">Architecture</CardHeader>
+              <CardHeader tag="h3">Architectures</CardHeader>
               <CardBody>
                 <CardTitle>Scaling, consulting, deployments</CardTitle>
-                <CardText>Scaling solutions, like private side chains, interchanges, IPFS, end-to-end encryption between services, consulting, deployment, all you need.</CardText>
+                <CardText>Scaling solutions, like private side chains, interexchanges, collection of ICO funds via other blockhains, IPFS, end-to-end encryption between services, APIs, other blockchains or fiat, mobile apps, consulting, deployment, all you need.</CardText>
                 <a href="https://ipfs.talaikis.com">
                   <Button color="primary">Example IPFS dApp</Button>
                 </a>

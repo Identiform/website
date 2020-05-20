@@ -2,8 +2,13 @@ import React, { PureComponent, Fragmwnt } from 'react'
 import { post } from 'axios'
 import { Button, Form, Input, Label, Col, Row } from 'reactstrap'
 
+/*
 const apiUrl = process.env.REACT_APP_CONTACT_API
 const apiKey = process.env.REACT_APP_API_KEY
+*/
+
+const apiUrl = 'https://k3mcw5n1kd.execute-api.us-east-1.amazonaws.com/prod'
+const apiKey = 'UCbJjypqjJFoCc9gK038HOp51NFCfTJ4ZJFxvVifuIY='
 
 const style = {
   padding: '10%',
@@ -59,7 +64,7 @@ export default class ContactUs extends PureComponent {
     const msg = this.state.msg
     const email = this.state.email
     if (name.length >= 0 && msg.length >= 0 && email.indexOf('@')  > -1) {
-      post(`${apiUrl}/contactus`, {
+      post(`${apiUrl}/contact-us`, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

@@ -43,7 +43,7 @@ class Header extends PureComponent {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://www.facebook.com/identiform/">
+                <NavLink href="https://www.facebook.com/talaikis/">
                   <FontAwesomeIcon style={style} icon={faFacebook} />
                 </NavLink>
               </NavItem>
